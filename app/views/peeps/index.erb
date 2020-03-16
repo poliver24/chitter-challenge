@@ -1,7 +1,8 @@
 <% @peeps.each do |peep| %>
     <li class="peep" id="peep-<%= peep.id %>">
         <strong><%= peep.user %></strong> 
-        <%= peep.text %> | <%= link_to 'Edit', edit_peep_path(peep) %> | <%= link_to 'Delete', peep, method: :delete %><br />
+        <%= peep.text %> | <%= link_to 'Edit', edit_peep_path(peep) %> | <%= link_to 'Delete', peep, method: :delete %><br /><br />
+        <%= peep.created_at%>
     </li>
 <%end%><br />
 

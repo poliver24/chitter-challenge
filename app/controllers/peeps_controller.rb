@@ -1,7 +1,7 @@
 class PeepsController < ApplicationController
      
     def index
-        @peeps = Peep.all
+        @peeps = Peep.all.order("created_at DESC")
         @peep = Peep.new
     end
 
