@@ -1,0 +1,12 @@
+<%=@peep.user%><br />
+<%=@peep.text%>
+
+<%= form_for @peep do |f| %>
+    <%=f.label :user%><br />
+    <%= f.text_field :user%><br />
+
+    <%=f.label :text%><br />
+    <%=f.text_field :text%><br />
+
+    <%= f.submit%>
+<%end%>

@@ -1,0 +1,16 @@
+<% @peeps.each do |peep| %>
+    <li class="peep" id="peep-<%= peep.id %>">
+        <strong><%= peep.user %></strong> 
+        <%= peep.text %> | <%= link_to 'Edit', edit_peep_path(peep) %> | <%= link_to 'Delete', peep, method: :delete %><br />
+    </li>
+<%end%><br />
+
+<%= form_for @peep do |f| %>
+    <%=f.label :user%><br />
+    <%= f.text_field :user%><br />
+
+    <%=f.label :text%><br />
+    <%=f.text_field :text%><br />
+
+    <%= f.submit%>
+<%end%>
